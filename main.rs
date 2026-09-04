@@ -32,11 +32,24 @@ fn main() {
     println!("{}", input.to_uppercase());*/
 
     // Test 05
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut strings = input.split_whitespace();
     let name: &str = strings.next().unwrap();
     let age: &str = strings.next().unwrap();
 
-    println!("Hi, {}! You are {} years old.", name, age);
+    println!("Hi, {}! You are {} years old.", name, age);*/
+
+    // Test 06
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut numbers = input.split_whitespace();
+    let n: i64 = numbers.next().unwrap().parse().unwrap();
+    
+    match (n % 3 == 0, n % 5 == 0) {
+        (true, true)   => println!("FizzBuzz"),
+        (true, false)  => println!("Fizz"),
+        (false, true)  => println!("Buzz"),
+        (false, false) => println!("{}", n),
+    }
 }
