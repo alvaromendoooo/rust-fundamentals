@@ -26,8 +26,17 @@ fn main() {
     println!("{}", w * h);*/
 
     // Test 04
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
-    println!("{}", input.to_uppercase());
+    println!("{}", input.to_uppercase());*/
+
+    // Test 05
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut strings = input.split_whitespace();
+    let name: &str = strings.next().unwrap();
+    let age: &str = strings.next().unwrap();
+
+    println!("Hi, {}! You are {} years old.", name, age);
 }
