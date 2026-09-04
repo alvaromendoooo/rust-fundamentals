@@ -6,7 +6,7 @@ fn main() {
     //println!("Hello, Rust!");
 
     // Test 02
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace(); // Split the inputs from
     // whitespace separation
@@ -14,5 +14,14 @@ fn main() {
     // takes it from variable definition type
     let b: i64 = numbers.next().unwrap().parse().unwrap();
     
-    println!("{}", a + b);
+    println!("{}", a + b);*/
+
+    // Test 03
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut numbers = input.split_whitespace();
+    let w: i64 = numbers.next().unwrap().parse().unwrap();
+    let h: i64 = numbers.next().unwrap().parse().unwrap();
+    
+    println!("{}", w * h);
 }
