@@ -41,7 +41,7 @@ fn main() {
     println!("Hi, {}! You are {} years old.", name, age);*/
 
     // Test 06
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n: i64 = numbers.next().unwrap().parse().unwrap();
@@ -51,5 +51,17 @@ fn main() {
         (true, false)  => println!("Fizz"),
         (false, true)  => println!("Buzz"),
         (false, false) => println!("{}", n),
+    }*/
+
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut numbers = input.split_whitespace();
+    let n = numbers.next().unwrap().parse().unwrap();
+    
+    let mut sum: i64 = 0;
+    for i in 1..=n {
+        sum += i;
     }
+
+    println!("{}", sum);
 }
