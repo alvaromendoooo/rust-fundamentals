@@ -17,11 +17,17 @@ fn main() {
     println!("{}", a + b);*/
 
     // Test 03
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let w: i64 = numbers.next().unwrap().parse().unwrap();
     let h: i64 = numbers.next().unwrap().parse().unwrap();
     
-    println!("{}", w * h);
+    println!("{}", w * h);*/
+
+    // Test 04
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+
+    println!("{}", input.to_uppercase());
 }
