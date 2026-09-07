@@ -52,8 +52,9 @@ fn main() {
         (false, true)  => println!("Buzz"),
         (false, false) => println!("{}", n),
     }*/
-
-    let mut input = String::new();
+    
+    // Test 07
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n = numbers.next().unwrap().parse().unwrap();
@@ -62,6 +63,18 @@ fn main() {
     for i in 1..=n {
         sum += i;
     }
+    println!("{}", sum);*/
+    
+    // Test 08
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut numbers = input.split_whitespace();
+    let n = numbers.next().unwrap().parse().unwrap();
 
-    println!("{}", sum);
+    println!("{}", square(n));
+
+}
+
+fn square(n: i64) -> i64 {
+    n * n
 }
