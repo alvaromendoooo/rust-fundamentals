@@ -94,7 +94,7 @@ fn main() {
     println!("{}", numbers.iter().max().unwrap());*/
 
     // Test 11
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let mut line = input.lines().next().unwrap();
@@ -104,7 +104,23 @@ fn main() {
         seen.insert(word);
     }
 
-    println!("{}", seen.len())
+    println!("{}", seen.len())*/
+
+    // Test 12
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+
+    let line = input.lines().next().unwrap();
+    let numbers: Vec<i64> = line.split_whitespace()
+        .map(|s| s.parse().unwrap())
+        .collect();
+    
+    let result: i64 = numbers.iter()
+        .filter(|n| *n % 2 == 0)
+        .map(|n| n * n)
+        .sum();
+
+    println!("{}", result);
 
 }
 
