@@ -76,9 +76,10 @@ fn main() {
     // Test 09
     let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
-    let mut lines = input.split_whitespace();
-    let line = lines.next().unwrap();
-    println!("{}", count(&line));
+    
+    let mut lines = input.lines();
+
+    println!("{}", count(&lines.next().unwrap()));
 
 
 }
