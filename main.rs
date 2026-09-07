@@ -66,15 +66,27 @@ fn main() {
     println!("{}", sum);*/
     
     // Test 08
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n = numbers.next().unwrap().parse().unwrap();
 
-    println!("{}", square(n));
+    println!("{}", square(n));*/
+
+    // Test 09
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+    let mut lines = input.split_whitespace();
+    let line = lines.next().unwrap();
+    println!("{}", count(&line));
+
 
 }
 
 fn square(n: i64) -> i64 {
     n * n
+}
+
+fn count(line: &str) -> i32 {
+    line.len() as i32
 }
