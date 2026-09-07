@@ -1,6 +1,13 @@
 use std::io::Read;
 use std::collections::HashSet;
 
+enum Light {
+    Red,
+    Yellow,
+    Green
+}
+
+
 fn main() {
 
     // Test 01
@@ -123,7 +130,7 @@ fn main() {
     println!("{}", result);*/
 
     // Test 13
-    pub struct Point {
+    /*pub struct Point {
         pub x: i32,
         pub y: i32,
     }
@@ -148,7 +155,17 @@ fn main() {
     let p1 = Point { x: lines[0], y: lines[1] };
     let p2 = Point { x: lines[2], y: lines[3] };
 
-    println!("{}", p1.distance_sq(&p2))
+    println!("{}", p1.distance_sq(&p2))*/
+
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).unwrap();
+    let current = match input.trim() {
+        "red" => Light::Red,
+        "yellow" => Light::Yellow,
+        _ => Light::Green
+    };
+
+    println!("{}", name(&next(current)))
 
 }
 
@@ -158,4 +175,20 @@ fn square(n: i64) -> i64 {
 
 fn count(line: &str) -> i32 {
     line.len() as i32
+}
+
+fn next(l: Light) -> Light {
+    match l {
+        Light::Red => Light::Green,
+        Light::Yellow => Light::Red,
+        Light::Green => Light::Yellow,
+    }
+}
+
+fn name(l: &Light) -> &str {
+    match l {
+        Light::Red => "red",
+        Light::Yellow => "yellow",
+        Light::Green => "green"
+    }
 }
