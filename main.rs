@@ -7,14 +7,13 @@ enum Light {
     Green
 }
 
-
 fn main() {
 
     // Test 01
-    //println!("Hello, Rust!");
+    println!("Hello, Rust!");
 
     // Test 02
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace(); // Split the inputs from
     // whitespace separation
@@ -22,34 +21,34 @@ fn main() {
     // takes it from variable definition type
     let b: i64 = numbers.next().unwrap().parse().unwrap();
     
-    println!("{}", a + b);*/
+    println!("{}", a + b);
 
     // Test 03
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let w: i64 = numbers.next().unwrap().parse().unwrap();
     let h: i64 = numbers.next().unwrap().parse().unwrap();
     
-    println!("{}", w * h);*/
+    println!("{}", w * h);
 
     // Test 04
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
-    println!("{}", input.to_uppercase());*/
+    println!("{}", input.to_uppercase());
 
     // Test 05
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut strings = input.split_whitespace();
     let name: &str = strings.next().unwrap();
     let age: &str = strings.next().unwrap();
 
-    println!("Hi, {}! You are {} years old.", name, age);*/
+    println!("Hi, {}! You are {} years old.", name, age);
 
     // Test 06
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n: i64 = numbers.next().unwrap().parse().unwrap();
@@ -59,10 +58,10 @@ fn main() {
         (true, false)  => println!("Fizz"),
         (false, true)  => println!("Buzz"),
         (false, false) => println!("{}", n),
-    }*/
+    }
     
     // Test 07
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n = numbers.next().unwrap().parse().unwrap();
@@ -71,26 +70,26 @@ fn main() {
     for i in 1..=n {
         sum += i;
     }
-    println!("{}", sum);*/
+    println!("{}", sum);
     
     // Test 08
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     let mut numbers = input.split_whitespace();
     let n = numbers.next().unwrap().parse().unwrap();
 
-    println!("{}", square(n));*/
+    println!("{}", square(n));
 
     // Test 09
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     
     let mut lines = input.lines();
 
-    println!("{}", count(&lines.next().unwrap()));*/
+    println!("{}", count(&lines.next().unwrap()));
 
     // Test 10
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let line_of_numbers = input.lines().next().unwrap();
@@ -98,10 +97,10 @@ fn main() {
         .map(|s| s.parse().unwrap())
         .collect();
     
-    println!("{}", numbers.iter().max().unwrap());*/
+    println!("{}", numbers.iter().max().unwrap());
 
     // Test 11
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let mut line = input.lines().next().unwrap();
@@ -111,10 +110,10 @@ fn main() {
         seen.insert(word);
     }
 
-    println!("{}", seen.len())*/
+    println!("{}", seen.len())
 
     // Test 12
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let line = input.lines().next().unwrap();
@@ -127,10 +126,10 @@ fn main() {
         .map(|n| n * n)
         .sum();
 
-    println!("{}", result);*/
+    println!("{}", result);
 
     // Test 13
-    /*pub struct Point {
+    pub struct Point {
         pub x: i32,
         pub y: i32,
     }
@@ -155,10 +154,10 @@ fn main() {
     let p1 = Point { x: lines[0], y: lines[1] };
     let p2 = Point { x: lines[2], y: lines[3] };
 
-    println!("{}", p1.distance_sq(&p2))*/
+    println!("{}", p1.distance_sq(&p2))
 
     // Test 14
-    /*let mut input = String::new();
+    let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
     let current = match input.trim() {
         "red" => Light::Red,
@@ -166,7 +165,7 @@ fn main() {
         _ => Light::Green
     };
 
-    println!("{}", name(&next(current)))*/
+    println!("{}", name(&next(current)))
 
     // Test 15
     let mut input = String::new();
