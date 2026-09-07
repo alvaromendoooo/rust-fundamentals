@@ -1,4 +1,5 @@
 use std::io::Read;
+use std::collections::HashSet;
 
 fn main() {
 
@@ -82,7 +83,7 @@ fn main() {
     println!("{}", count(&lines.next().unwrap()));*/
 
     // Test 10
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let line_of_numbers = input.lines().next().unwrap();
@@ -90,7 +91,20 @@ fn main() {
         .map(|s| s.parse().unwrap())
         .collect();
     
-    println!("{}", numbers.iter().max().unwrap());
+    println!("{}", numbers.iter().max().unwrap());*/
+
+    // Test 11
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+
+    let mut line = input.lines().next().unwrap();
+    let mut seen: HashSet<&str> = HashSet::new();
+    
+    for word in line.split_whitespace() {
+        seen.insert(word);
+    }
+
+    println!("{}", seen.len())
 
 }
 
