@@ -157,7 +157,8 @@ fn main() {
 
     println!("{}", p1.distance_sq(&p2))*/
 
-    let mut input = String::new();
+    // Test 14
+    /*let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
     let current = match input.trim() {
         "red" => Light::Red,
@@ -165,7 +166,16 @@ fn main() {
         _ => Light::Green
     };
 
-    println!("{}", name(&next(current)))
+    println!("{}", name(&next(current)))*/
+
+    // Test 15
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).unwrap();
+    
+    match parse_int(&input) {
+        Ok(n) => println!("ok: {}", n),
+        Err(e) => println!("error: {}", e)
+    }
 
 }
 
@@ -191,4 +201,10 @@ fn name(l: &Light) -> &str {
         Light::Yellow => "yellow",
         Light::Green => "green"
     }
+}
+
+fn parse_int(s: &str) -> Result<i32, String> {
+    s.trim()
+        .parse::<i32>()
+        .map_err(|_| "not a number".to_string())
 }
