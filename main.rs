@@ -107,7 +107,7 @@ fn main() {
     println!("{}", seen.len())*/
 
     // Test 12
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
 
     let line = input.lines().next().unwrap();
@@ -120,7 +120,35 @@ fn main() {
         .map(|n| n * n)
         .sum();
 
-    println!("{}", result);
+    println!("{}", result);*/
+
+    // Test 13
+    pub struct Point {
+        pub x: i32,
+        pub y: i32,
+    }
+
+    impl Point {
+        fn distance_sq(&self, other: &Point) -> i32 {
+            let first_expression = other.x - self.x;
+            let second_expression = other.y - self.y;
+
+            return (first_expression * first_expression) + (second_expression * second_expression)
+        }
+    }
+
+    let lines: Vec<i32> = (0..4)
+        .map(|_| {
+            let mut s = String::new();
+            std::io::stdin().read_line(&mut s).unwrap();
+            s.trim().parse().unwrap()
+        })
+        .collect();
+
+    let p1 = Point { x: lines[0], y: lines[1] };
+    let p2 = Point { x: lines[2], y: lines[3] };
+
+    println!("{}", p1.distance_sq(&p2))
 
 }
 
