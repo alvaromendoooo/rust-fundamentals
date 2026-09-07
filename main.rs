@@ -74,13 +74,23 @@ fn main() {
     println!("{}", square(n));*/
 
     // Test 09
-    let mut input = String::new();
+    /*let mut input = String::new();
     std::io::stdin().read_to_string(&mut input).unwrap();
     
     let mut lines = input.lines();
 
-    println!("{}", count(&lines.next().unwrap()));
+    println!("{}", count(&lines.next().unwrap()));*/
 
+    // Test 10
+    let mut input = String::new();
+    std::io::stdin().read_to_string(&mut input).unwrap();
+
+    let line_of_numbers = input.lines().next().unwrap();
+    let numbers: Vec<i64> = line_of_numbers.split_whitespace()
+        .map(|s| s.parse().unwrap())
+        .collect();
+    
+    println!("{}", numbers.iter().max().unwrap());
 
 }
 
